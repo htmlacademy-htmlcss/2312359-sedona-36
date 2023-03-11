@@ -51,7 +51,8 @@
                 </ol>
             </section>
 
-            <section class="catalog-filters" data-test="filter">
+            <section class="catalog-filters">
+                <div class="catalog-filters-container">
                 <h2 class="visually-hidden">Фильтры для поиска гостиниц</h2>
 
                 <form class="catalog-filters-form" action="#" method="get">
@@ -95,14 +96,14 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <fieldset>
+                    <fieldset class="catalog-filters-group catalog-filters-group-price">
                         <legend class="catalog-filters-title">Стоимость, ₽:</legend>
                         <div class="input-container">
                             <label class="control">
                                 <input type="text" class="catalog-filters-price" name="min-price" value="0" placeholder="от">От
                             </label>
                             <label class="control">
-                                <input type="text" class="catalog-filter-price" id="max-price" name="max-price" value="9000" placeholder="до">До
+                                <input type="text" class="catalog-filter-price" name="max-price" value="9000" placeholder="до">До
                             </label>
                         </div>
                         <div class="range-block">
@@ -118,10 +119,11 @@
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset>
+                    <div class="catalog-button-group">
                         <button class="button apply-button" type="submit">Применить</button>
-                        <button class="button reset-button" type="reset">Сбросить</button>
-                    </fieldset>
+                        <button class="reset-button" type="reset">Сбросить</button>
+                    </div>
+                </div>
                 </form>
             </section>
         </div>
@@ -222,8 +224,10 @@
             </li>
         </ul>
         </div>
+    </section>
 
-        <ol class="pagination">
+    <section class="pagination">
+        <ol class="pagination-list">
             <li class="pagination-item">
                 <a class="pagination-link">1</a>
             </li>
@@ -243,7 +247,7 @@
                 <a class="pagination-link" href="#">10</a>
             </li>
         </ol>
-        </section>
+    </section>
     </main>
 
     <footer class="footer" data-test="footer">
@@ -257,27 +261,29 @@
             </form>
           </section>
 
-          <ul class="footer-social-media-list">
-            <li class="footer-social-media-item">
-              <a class="footer-social-media-link vk-icon" href="https://vk.com/htmlacademy">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </li>
-            <li class="footer-social-media-item">
-              <a class="footer-social-media-link tg-icon" href="https://t.me/htmlacademy">
-                <span class="visually-hidden">Telegram</span>
-              </a>
-            </li>
-            <li class="footer-social-media-item">
-              <a class="footer-social-media-link yt-icon" href="https://www.youtube.com/user/htmlacademyru">
-                <span class="visually-hidden">YouTube</span>
-              </a>
-            </li>
-          </ul>
-          <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-          <a class="footer-copyright" href="https://htmlacademy.ru/">
-            <img class="footer-copyright-logo" src="images/logos/academy_logo.svg" width="115" height="33" alt="Логотип разработчика сайта">
-          </a>
+          <section class="footer-contacts">
+            <ul class="footer-social-media-list">
+              <li class="footer-social-media-item">
+                <a class="footer-social-media-link vk-icon" href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
+              <li class="footer-social-media-item">
+                <a class="footer-social-media-link tg-icon" href="https://t.me/htmlacademy">
+                  <span class="visually-hidden">Telegram</span>
+                </a>
+              </li>
+              <li class="footer-social-media-item">
+                <a class="footer-social-media-link yt-icon" href="https://www.youtube.com/user/htmlacademyru">
+                  <span class="visually-hidden">YouTube</span>
+                </a>
+              </li>
+            </ul>
+            <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+            <a class="footer-copyright" href="https://htmlacademy.ru/">
+              <img class="footer-copyright-logo" src="images/logos/academy_logo.svg" width="115" height="33" alt="Логотип разработчика сайта">
+            </a>
+          </section>
       </footer>
     </div>
   </body>
