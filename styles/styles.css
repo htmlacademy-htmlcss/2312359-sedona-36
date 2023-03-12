@@ -94,17 +94,6 @@ body {
     align-items: center;
 }
 
-.navigation-user {
-    max-width: 320px;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 14px 0;
-    list-style-type: none;
-    align-items: center;
-}
-
 .navigation-item {
 
 }
@@ -120,14 +109,66 @@ body {
     padding: 20px 16px;
 }
 
+.navigation-link-current {
+    position: relative;
+}
+
+.navigation-link-current::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #756257;
+    height: 1px;
+    bottom: -1px;
+    left: 16px;
+    width: calc(100% - 32px);
+}
+
+.navigation-user {
+    max-width: 320px;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 14px 0;
+    list-style-type: none;
+    align-items: center;
+}
+
+.navigation-user-item {
+    position: relative;
+}
+
+.navigation-user-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+    width: 44px;
+    height: 36px;
+}
+
+.navigation-user-search {
+    background-image: url("../images/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.navigation-user-favourite {
+    background-image: url("../images/icons/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
 .favourite-number {
     font-weight: 400;
     font-size: 10px;
     line-height: 10px;
     color: #ffffff;
     text-align: center;
-    width: 20px;
-    height: 20px;
     background-color: #7DB54F;
     border-radius: 50%;
     padding: 5px 5px;
@@ -145,10 +186,9 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
-    background-color: #756157;
     border-radius: 4px;
-    padding: 8px 50px;
     font-family: "PT Sans", sans-serif;
+    box-sizing: border-box;
     display: inline-block;
 }
 
@@ -165,6 +205,7 @@ body {
     border-radius: 4px;
     padding: 8px 34px;
     display: inline-block;
+    box-sizing: border-box;
   }
 
 .main-index {
@@ -206,7 +247,7 @@ body {
 }
 
 .advantages-title-description {
-    margin: 0 auto;
+    margin: 0 auto 89px;
     width: 651px;
     text-align: center;
 }
@@ -235,6 +276,7 @@ body {
     width: 400px;
     padding-top: 112px;
     padding-bottom: 112px;
+    box-sizing: border-box;
 }
 
 .advantages-subtitle {
@@ -276,6 +318,7 @@ body {
     background-color: #83B3D333;
     display: flex;
     justify-content: space-between;
+    width: auto;
 }
 
 .city-image-container {
@@ -292,6 +335,7 @@ body {
     background-color: #83B3D333;
     display: flex;
     justify-content: space-between;
+    width: auto;
 }
 
 .service {
@@ -311,6 +355,9 @@ body {
 }
 .service-title-description {
     text-align: center;
+    margin: 0 auto 64px;
+    padding: 0;
+    width: 510px;
 }
 .service-description {
     margin: 0 auto;
@@ -366,15 +413,27 @@ body {
 
 .hotel-reservation-description {
     width: 592px;
-    margin: 0 auto;
+    margin: 0 auto 53px;
+    padding: 0;
 }
 
-.hotel-reservation-button {
-    font-size: 20px;
-    line-height: 36px;
+.hotel-reservation-link {
+    margin: 0 auto;
+    border: none;
+    display: block;
+    border-radius: 4px;
+    width: 376px;
     padding: 0;
     padding-top: 8px;
     padding-bottom: 8px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #756157;
 }
 
 .footer {
@@ -388,6 +447,7 @@ body {
     background-image: url("../images/backgrounds/subscribe-background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+    padding: 96px 258px 104px;
 }
 
 .subscription-title {
@@ -404,7 +464,7 @@ body {
 }
 
 .subscription-form {
-
+    display: flex;
 }
 
 .field {
@@ -415,14 +475,18 @@ body {
     line-height: 24px;
     border-radius: 4px 0 0 4px;
     border-width: 0;
+    width: 452px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    font-family: "PT Sans", sans-serif;
 }
 
 .subscription-button {
-    font-size: 20px;
-    line-height: 36px;
-    color: #ffffff;
-    background-color: #82B3D3;
     border-radius: 0 4px 4px 0;
+    padding: 8px 50px;
+    margin: 0 auto;
+    background-color: #68A2CA;
 }
 
 .footer-contacts {
@@ -446,22 +510,29 @@ body {
 }
 
 .footer-social-media-link {
-
+    display: block;
+    padding: 13px 12px;
 }
 
 .vk-icon {
     background-image: url("../images/icons/vk.svg");
     background-repeat: no-repeat;
+    width: 25px;
+    height: 15px;
 }
 
 .tg-icon {
     background-image: url("../images/icons/tg.svg");
     background-repeat: no-repeat;
+    width: 25px;
+    height: 15px;
 }
 
 .yt-icon {
     background-image: url("../images/icons/youtube.svg");
     background-repeat: no-repeat;
+    width: 25px;
+    height: 15px;
 }
 
 .footer-contact-phone {
@@ -481,7 +552,8 @@ body {
 }
 
 .footer-copyright-logo {
-
+    margin-left: auto;
+    display: block;
 }
 
 
@@ -697,7 +769,8 @@ body {
     width: 160px;
     margin-left: auto;
     flex-wrap: wrap;
-    align-items: center
+    align-items: center;
+    gap: 9px;
 }
 
 .view-of-results-button {
@@ -717,6 +790,8 @@ body {
     padding: 0;
     list-style-type: none;
     gap: 20px;
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
  }
 
 .hotel-card {
@@ -724,6 +799,7 @@ body {
     border: 1px solid #e6e6e6;
     border-radius: 4px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .hotel-card-link {
@@ -744,6 +820,7 @@ body {
 
 .hotel-card-description-container {
     gap: 16px 20px;
+    grid-template-columns: 140px 140px;
 }
 
 .hotel-card-text {
@@ -764,15 +841,15 @@ body {
 }
 
 .hotel-grade-4 {
-
+    width: 89px;
 }
 
 .hotel-grade-3 {
-
+    width: 66px;
 }
 
 .hotel-grade-2 {
-
+    width: 40px;
 }
 
 .hotel-rating {
@@ -802,7 +879,7 @@ body {
 }
 
 .pagination-item {
-
+    padding: 0 5px;
 }
 
 .pagination-link {
@@ -817,10 +894,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    padding-top: 11.36px;
-    padding-bottom: 12.64px;
-    padding-left: 23.24px;
-    padding-right: 23.24px;
+    padding: 11px 23px;
 }
 
 .pagination-dots {
@@ -831,6 +905,7 @@ body {
 .catalog-subscription {
     background-color: #ffffff;
     text-align: center;
+    padding: 96px 258px 104px;
 }
 
 .catalog-subscription-title {
