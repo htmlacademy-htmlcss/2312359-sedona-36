@@ -125,16 +125,16 @@ body {
     width: calc(100% - 32px);
 }
 
-.nav-link:hover {
+.navigation-link:hover {
     color: #3f5e72;
 }
 
-.nav-link:focus {
+.navigation-link:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.nav-link:active {
+.navigation-link:active {
     background-color: #000000;
     color: #ffffff;
 }
@@ -165,11 +165,11 @@ body {
     height: 20px;
 }
 
-.user-link:hover {
+.navigation-user-link:hover {
     opacity: 0.5;
 }
 
-.user-link:focus {
+.navigation-user-link:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -245,7 +245,7 @@ body {
 
 .welcome {
     background-color: #4d9adf;
-    background-image: url("../images/backgrounds/index-background.jpg");
+    background-image: url("../images/backgrounds/triangles-on-index-background.svg"), url("../images/backgrounds/index-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
@@ -1314,6 +1314,7 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
+    background-color: #68a2ca;
 }
 
 .pagination-link:hover {
@@ -1398,4 +1399,358 @@ body {
     padding: 0;
     width: 475px;
     margin-bottom: 54px;
+}
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+    display: none;
+}
+
+.modal-container-open {
+    display: flex;
+}
+
+.modal-search-hotels {
+    width: 717px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px rgb(0 0 0 / 15%);
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 64px 70px;
+}
+
+.modal-search-hotels-content {
+    color: #000000;
+}
+
+.modal-search-hotels-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.modal-search-hotels-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 577px;
+    margin: 64px 0 0;
+    box-sizing: border-box;
+}
+
+.modal-search-hotels-date-container {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 23px;
+    justify-content: space-between;
+}
+
+.date-label {
+    width: 125px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.modal-date-input-container {
+    width: 440px;
+}
+
+.modal-date-field {
+    background-color: #F2F2F2;
+    background-image: url("../images/modal/date.svg");
+    background-repeat: no-repeat;
+    background-position: right 21px center;
+    margin: 0;
+    padding: 12px 0 12px 20px;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.modal-date-field:hover,
+.modal-counter-input:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-date-field:focus,
+.modal-counter-input:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-date-field:focus:where(:not(:placeholder-shown)),
+.modal-counter-input:focus:where(:not(:placeholder-shown)) {
+    outline: 2px solid #000000;
+  }
+
+.modal-date-field-error {
+    display: block;
+    margin-top: 4px;
+    margin-left: 21px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.modal-search-hotels-form-error {
+    color: rgba(255, 87, 87, 1);
+}
+
+.modal-search-hotels-person-number {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    align-items: center;
+    position: relative;
+}
+
+.modal-number-adults-label {
+    text-align: center;
+    padding: 0;
+    margin-right: 46px;
+    width: 91px;
+}
+
+.modal-number-kids-label {
+    text-align: center;
+    padding: 0;
+    margin-right: 83px;
+    width: 49px;
+}
+
+.modal-kids-tooltip {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 158px;
+    bottom: 8px;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.modal-kids-tooltip:hover .modal-tooltip-icon {
+    fill: #3F5E72;
+}
+
+.modal-kids-tooltip:focus {
+    outline: none;
+}
+
+.modal-tooltip-icon {
+    fill: #83B3D3;
+}
+
+.modal-kids-tooltip:focus .modal-tooltip-icon {
+    fill: #3F5E72;
+}
+
+.modal-kids-tooltip:hover .modal-tooltip-text,
+.modal-kids-tooltip:focus .modal-tooltip-text {
+    display: block;
+  }
+
+.modal-tooltip-text::before {
+    position: absolute;
+    top: -15px;
+    left: 119px;
+    content: url("../images/modal/triangle.svg");
+    width: 9px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.modal-tooltip-text {
+    display: none;
+    background: #333333;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-family: "Pt Sans", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: none;
+    text-align: left;
+    padding: 19px 20px 23px 21px;
+    border-radius: 10px;
+    width: 216px;
+    position: absolute;
+    left: 12px;
+    top: 42px;
+    transform: translateX(-50%);
+}
+
+.modal-counter-container {
+    display: flex;
+    width: 110px;
+}
+
+.modal-counter-container:not(:last-child) {
+    margin-right: 88px;
+}
+
+.modal-counter-button {
+    display: block;
+    width: 40px;
+    height: 48px;
+    background-color: #F2F2F2;
+    border: none;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.modal-counter-button:focus {
+    z-index: 1;
+}
+
+.modal-button-minus {
+    background-image: url("../images/modal/minus.svg");
+    border-radius: 4px 0 0 4px;
+}
+
+.modal-button-minus:hover {
+    background-image: url("../images/modal/minus-dark.svg");
+}
+
+.modal-button-minus:focus {
+    background-image: url("../images/modal/minus-dark.svg"), url("../images/modal/outline-for-counter.svg");
+    outline: none;
+}
+
+.modal-button-minus:active {
+    background-image: url("../images/modal/minus.svg");
+}
+
+.modal-button-plus {
+    background-image: url("../images/modal/plus.svg");
+    border-radius: 0 4px 4px 0;
+}
+
+.modal-button-plus:hover {
+    background-image: url("../images/modal/plus-dark.svg");
+}
+
+.modal-button-plus:focus {
+    background-image: url("../images/modal/plus-dark.svg"), url("../images/modal/outline-for-counter.svg");
+    outline: none;
+}
+
+.modal-button-plus:active {
+    background-image: url("../images/modal/plus-dark.svg");
+}
+
+.modal-counter-input::-webkit-outer-spin-button,
+.modal-counter-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.modal-counter-input {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    width: 31px;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.modal-counter-input:focus {
+    z-index: 1;
+}
+
+.modal-search-button {
+    background-color: #82B3D3;
+    border: none;
+    padding: 18px 256.5px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.modal-search-button:hover {
+    background-color: #68A2CA;
+}
+
+.modal-search-button:focus {
+    outline: none;
+    background-color: #68A2CA;
+}
+
+.modal-search-button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.modal-search-button:disabled {
+    background-color: #E5E5E5;
+}
+
+.modal-close-button {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 64px;
+    right: 53px;
+    padding: 26px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-close-button:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+    outline: none;
+}
+
+.modal-close-button:active, .modal-close-button-img {
+    fill: #000000;
+    opacity: 0.3;
+}
+
+.modal-close-button-img {
+    position: absolute;
+    fill: #000000;
+    top: 19px;
+    right: 19px;
 }
