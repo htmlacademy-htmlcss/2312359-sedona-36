@@ -825,11 +825,6 @@ body {
     display: inline-block;
     color: #ffffff;
     text-decoration: none;
-}
-
-.breadcrumbs-link {
-    display: inline-block;
-    color: #ffffff;
     cursor: pointer;
 }
 
