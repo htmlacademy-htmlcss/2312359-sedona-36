@@ -1057,12 +1057,12 @@ body {
 
 .price-inputs-min-price:focus {
     background: #E6E6E6;
-    border: 3px solid #83B3D3;
+    outline: 3px solid #83B3D3;
 }
 
 .price-inputs-min-price:active {
     background: #F2F2F2;
-    border: 2px solid #000000;
+    outline: 2px solid #000000;
 }
 
 .last-value {
@@ -1096,12 +1096,12 @@ body {
 
 .price-inputs-max-price:focus {
     background: #E6E6E6;
-    border: 3px solid #83B3D3;
+    outline: 3px solid #83B3D3;
 }
 
 .price-inputs-max-price:active {
     background: #F2F2F2;
-    border: 2px solid #000000;
+    outline: 2px solid #000000;
 }
 
 .price-inputs-max-price::-webkit-outer-spin-button,
@@ -1217,6 +1217,7 @@ body {
 
 .reset-button:hover {
     color: #ffffff;
+    opacity: 0.6;
 }
 
 .reset-button:focus {
@@ -1586,19 +1587,19 @@ body {
     padding: 16px 21px;
 }
 
-.pagination-button-dot:hover {
-    background-color: #f2f2f2;
-    color: #000000;
+.pagination-button-dots:hover {
+    background-color: #68a2ca;
+    color: #FFFFFF;
 }
 
-.pagination-button-dot:focus {
-    background-color: #f2f2f2;
-    color: #000000;
+.pagination-button-dots:focus {
+    background-color: #82B3D3;
+    color: #FFFFFF;;
 }
 
-.pagination-button-dot:active {
-    background-color: #f2f2f2;
-    color: #000000;
+.pagination-button-dots:active {
+    background-color: #82B3D3;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-button-last {
