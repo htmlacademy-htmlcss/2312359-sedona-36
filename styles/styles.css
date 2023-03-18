@@ -1218,6 +1218,7 @@ body {
 .reset-button:focus {
     color: #ffffff;
     outline: 3px solid #83b3d3;
+    border-radius: 4px;
 }
 
 .reset-button:active {
